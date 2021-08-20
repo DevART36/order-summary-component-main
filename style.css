@@ -11,13 +11,27 @@
     box-sizing: border-box;
 }
 body {
-    background: var(--Pale-blue) url(images/pattern-background-desktop.svg) no-repeat scroll center;
-    background-size: initial;
+    background-color: var(--Pale-blue);
+    background-image: url("images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center; 
+    align-content: center; 
     font-family: 'Red Hat Display', sans-serif;
-    
+}
+h1 {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 0.9em;
 }
 .card {
-    border-radius: 15px;
+    border-radius: 25%;
     -webkit-border-radius: 15px;
     border: none;
     background: rgba(255,254,254,255);
@@ -76,7 +90,7 @@ body {
     }
     .description .price {
         display: flex;
-        justify-content: space-evenly;
+       justify-content: space-between;
         align-items: center;
         flex-flow: row nowrap;
         width: 80%;
@@ -88,7 +102,9 @@ body {
         
     }
   .price .price-plan-text {
+    
         display: flex;
+        justify-self: flex-start;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
@@ -107,6 +123,7 @@ body {
   }
   
   .price > .change-btn {
+      
       color: var(--Bright-blue);
       font-weight: bold;
       font-size: 14px;
@@ -143,6 +160,8 @@ body {
   .blue-bg {
       background-color: var(--Bright-blue);
       color: white;
+      padding: 15px;
+      font-size: 0.9em;
   }
   .blue-bg:hover {
       filter: saturate(0.4);
